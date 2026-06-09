@@ -1,0 +1,23 @@
+<Project>
+  <Sdk Name="Microsoft.VisualStudio.JavaScript.Sdk"/>
+
+  <PropertyGroup>
+    <StartupCommand>pnpm run dev</StartupCommand>
+    <!-- <JavaScriptTestRoot>.\packages\app</JavaScriptTestRoot>
+    <JavaScriptTestFramework>Vitest</JavaScriptTestFramework> -->
+    <!-- Allows the build (or compile) script located on package.json to run on Build -->
+<!--    <ShouldRunBuildScript>false</ShouldRunBuildScript>-->
+    <ShouldRunNpmInstall>false</ShouldRunNpmInstall>
+    <!-- Folder where production build objects will be placed -->
+    <BuildOutputFolder>$(MSBuildProjectDirectory)\packages\app\dist</BuildOutputFolder>
+    <BuildCommand>pnpm run build</BuildCommand>
+    <ProductionBuildCommand>pnpm run build</ProductionBuildCommand>
+    <Configurations>Debug;Release</Configurations>
+    <Platforms>AnyCPU</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="packages\*\tsconfig.json" />
+  </ItemGroup>
+
+</Project>

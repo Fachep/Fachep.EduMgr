@@ -1,0 +1,25 @@
+{
+  "$schema": "./node_modules/@openapitools/openapi-generator-cli/config.schema.json",
+  "spaces": 2,
+  "generator-cli": {
+    "version": "7.23.0",
+    "generators": {
+      "from-swagger-gen": {
+        "inputSpec": "http://localhost:5165/swagger/v1/swagger.json",
+        "additionalProperties": {
+          "supportsES6": "true",
+          "npmName": "@edumgr/openapi",
+          "npmVersion": "0.0.1"
+        },
+        "output": "./packages/openapi",
+        "generatorName": "typescript",
+        "globalProperty": {
+          "apiTests": "false",
+          "modelTests": "false",
+          "apiDocs": "false",
+          "modelDocs": "false"
+        }
+      }
+    }
+  }
+}

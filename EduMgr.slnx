@@ -1,0 +1,33 @@
+﻿<Solution>
+    <Folder Name="/SolutionFolder/">
+        <File Path=".editorconfig" />
+        <File Path=".gitattributes" />
+        <File Path=".gitignore" />
+        <File Path="Directory.Build.props" />
+        <File Path="Directory.packages.props" />
+        <File Path="global.json" />
+        <File Path="README.md" />
+        <File Path="assets/swagger.json" />
+    </Folder>
+    <Folder Name="/src/">
+        <Project Path="src/Fachep.EduMgr.Entities/Fachep.EduMgr.Entities.csproj" />
+        <Project Path="src/Fachep.EduMgr.WebAPI.Business/Fachep.EduMgr.WebAPI.Business.csproj" />
+        <Project Path="src/Fachep.EduMgr.WebAPI/Fachep.EduMgr.WebAPI.csproj" />
+        <Project Path="src\Fachep.EduMgr.AppHost\Fachep.EduMgr.AppHost.csproj" />
+        <Project Path="src\Fachep.EduMgr.Background\Fachep.EduMgr.Background.csproj">
+            <Deploy Solution="Debug|*" />
+        </Project>
+        <Project Path="src\Fachep.EduMgr.Database\Fachep.EduMgr.Database.csproj" />
+        <Project Path="src\Fachep.EduMgr.Frontend\Fachep.EduMgr.Frontend.esproj">
+            <Build Solution="Debug|*" />
+            <Deploy Solution="Debug|*" />
+        </Project>
+        <Project Path="src\Fachep.EduMgr.Infrastructure.Common\Fachep.EduMgr.Infrastructure.Common.csproj" />
+        <Project Path="src\Fachep.EduMgr.Infrastructure.Data.EntityFrameworkCore\Fachep.EduMgr.Infrastructure.Data.EntityFrameworkCore.csproj" />
+        <Project Path="src\Fachep.EduMgr.Infrastructure.Data\Fachep.EduMgr.Infrastructure.Data.csproj" />
+        <Project Path="src\Fachep.EduMgr.ServiceDefaults\Fachep.EduMgr.ServiceDefaults.csproj" />
+        <Project Path="src\Fachep.EduMgr.WebHost\Fachep.EduMgr.WebHost.csproj">
+            <Deploy Solution="Debug|*" />
+        </Project>
+    </Folder>
+</Solution>

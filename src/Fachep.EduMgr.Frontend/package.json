@@ -1,0 +1,27 @@
+{
+  "name": "@edumgr/workspace",
+  "private": true,
+  "version": "0.0.1",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "generate-api": "rimraf packages/openapi && openapi-generator-cli generate && pnpm run install:api",
+    "install:api": "pnpm --filter @edumgr/openapi install @edumgr/openapi@workspace:*",
+    "build:api": "pnpm --filter @edumgr/openapi run build",
+    "build:app": "pnpm --filter @edumgr/app run build",
+    "build": "pnpm run install:api && pnpm run build:app",
+    "dev": "pnpm --filter @edumgr/app run dev",
+    "lint:app": "pnpm --filter @edumgr/app run lint",
+    "lint": "pnpm run lint:app",
+    "type-check:app": "pnpm --filter @edumgr/app run type-check",
+    "type-check": "pnpm run type-check:app",
+    "prettier": "prettier --write ."
+  },
+  "packageManager": "pnpm@11.5.2",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.35.0",
+    "prettier": "^3.8.3",
+    "rimraf": "^6.1.3"
+  }
+}

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Fachep.EduMgr.WebAPI</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Fachep.EduMgr.Infrastructure.Data\Fachep.EduMgr.Infrastructure.Data.csproj"/>
+    <ProjectReference Include="..\Fachep.EduMgr.Entities\Fachep.EduMgr.Entities.csproj"/>
+    <ProjectReference Include="..\Fachep.EduMgr.WebAPI\Fachep.EduMgr.WebAPI.csproj"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore"/>
+    <PackageReference Include="Microsoft.Extensions.Identity.Core"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App"/>
+  </ItemGroup>
+
+</Project>

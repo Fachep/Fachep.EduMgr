@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Sdk Name="Aspire.AppHost.Sdk"/>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost"/>
+    <PackageReference Include="Aspire.Hosting.PostgreSQL"/>
+    <PackageReference Include="Aspire.Hosting.Yarp"/>
+    <PackageReference Include="CommunityToolkit.Aspire.Hosting.NodeJS.Extensions"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Fachep.EduMgr.Background\Fachep.EduMgr.Background.csproj"/>
+    <ProjectReference Include="..\Fachep.EduMgr.WebHost\Fachep.EduMgr.WebHost.csproj"/>
+    <ProjectReference Include="..\Fachep.EduMgr.Frontend\Fachep.EduMgr.Frontend.esproj"/>
+  </ItemGroup>
+
+</Project>
